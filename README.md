@@ -2,6 +2,10 @@
 # Smol Vision 🐣
 Recipes for shrinking, optimizing, customizing cutting edge vision models. 
 
+Latest examples 👇🏻 
+- [Multimodal RAG using ColPali and Qwen2-VL](https://github.com/merveenoyan/smol-vision/blob/main/ColPali_%2B_Qwen2_VL.ipynb)
+- [QLoRA Fine-tune IDEFICS3 on VQAv2](https://github.com/merveenoyan/smol-vision/blob/main/Idefics_FT.ipynb)
+
 |                              | Notebook                                                                                                                                                                | Description                                                                                                |
 |------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
 | Quantization/ONNX            | [Faster and Smaller Zero-shot Object Detection with Optimum](https://github.com/merveenoyan/smol-vision/blob/main/Faster_Zero_shot_Object_Detection_with_Optimum.ipynb) | Quantize the state-of-the-art zero-shot object detection model OWLv2 using Optimum ONNXRuntime tools.      |
