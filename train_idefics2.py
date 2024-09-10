@@ -1,5 +1,5 @@
 import torch
-from peft import LoraConfig
+from peft import LoraConfig, prepare_model_for_kbit_training, get_peft_model
 from transformers import AutoProcessor, BitsAndBytesConfig, Idefics3ForConditionalGeneration
 from datasets import load_dataset
 
@@ -21,32 +21,42 @@ if USE_QLORA or USE_LORA:
         r=8,
         lora_alpha=8,
         lora_dropout=0.1,
-        target_modules='.*(text_model|connector).*(down_proj|gate_proj|up_proj|k_proj|q_proj|v_proj|o_proj).*$',
+        target_modules=['down_proj','o_proj','k_proj','q_proj','gate_proj','up_proj','v_proj'],
         use_dora=False if USE_QLORA else True,
         init_lora_weights="gaussian"
     )
+    lora_config.inference_mode = False
     if USE_QLORA:
         bnb_config = BitsAndBytesConfig(
-            load_in_8bit=True,            
+            load_in_4bit=True,
+            bnb_4bit_use_double_quant=True,
+            bnb_4bit_quant_type="nf4",
+            bnb_4bit_compute_dtype=torch.bfloat16
         )
+        
     model = Idefics3ForConditionalGeneration.from_pretrained(
         model_id,
-        torch_dtype=torch.bfloat16,
         quantization_config=bnb_config if USE_QLORA else None,
         _attn_implementation="flash_attention_2",
-        #device_map="auto"
+        device_map="auto"
     )
     model.add_adapter(lora_config)
     model.enable_adapters()
+    model = prepare_model_for_kbit_training(model)
+    model = get_peft_model(model, lora_config)
+    print(model.get_nb_trainable_parameters())
+    
+
 else:
     model = Idefics3ForConditionalGeneration.from_pretrained(
         model_id,
         torch_dtype=torch.bfloat16,
         _attn_implementation="flash_attention_2",
     ).to(DEVICE)
-
-for param in model.model.vision_model.parameters():
-    param.requires_grad = False
+    
+    # if you'd like to only fine-tune LLM
+    for param in model.model.vision_model.parameters():
+        param.requires_grad = False
 
 ds = load_dataset('merve/vqav2-small', trust_remote_code=True)
 split_ds = ds["validation"].train_test_split(test_size=0.8)
@@ -94,7 +104,7 @@ from transformers import TrainingArguments, Trainer
 
 training_args = TrainingArguments(
     num_train_epochs=1,
-    per_device_train_batch_size=1,
+    per_device_train_batch_size=1, # increase for QLoRA
     gradient_accumulation_steps=8,
     warmup_steps=50,
     learning_rate=1e-4,
@@ -103,7 +113,7 @@ training_args = TrainingArguments(
     save_strategy="steps",
     save_steps=250,
     save_total_limit=1,
-    optim="paged_adamw_8bit",
+    optim="adamw_hf", # for 8-bit, pick paged_adamw_hf
     #evaluation_strategy="epoch",
     bf16=True,
     output_dir="./idefics3-llama-vqav2",
