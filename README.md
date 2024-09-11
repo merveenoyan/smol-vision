@@ -1,6 +1,6 @@
 ![Smol](https://github.com/merveenoyan/smol-vision/assets/53175384/930d5b36-bb9d-4ab6-8b5a-4fec28c48f80)
 # Smol Vision 🐣
-Recipes for shrinking, optimizing, customizing cutting edge vision models. 
+Recipes for shrinking, optimizing, customizing cutting edge vision and multimodal AI models. 
 
 Latest examples 👇🏻 
 - [Multimodal RAG using ColPali and Qwen2-VL](https://github.com/merveenoyan/smol-vision/blob/main/ColPali_%2B_Qwen2_VL.ipynb)
