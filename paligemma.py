@@ -23,8 +23,7 @@ def collate_fn(examples):
   labels= [example['multiple_choice_answer'] for example in examples]
   images = [example["image"].convert("RGB") for example in examples]
   tokens = processor(text=texts, images=images, suffix=labels,
-                    return_tensors="pt", padding="longest",
-                    tokenize_newline_separately=False)
+                    return_tensors="pt", padding="longest")
 
   tokens = tokens.to(torch.bfloat16).to(device)
   return tokens
