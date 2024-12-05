@@ -11,7 +11,7 @@ FREEZE_VISION = False
 ds = load_dataset('merve/vqav2-small', split="validation")
 ds = ds.train_test_split(test_size=0.5)["train"]
 
-model_id = "google/paligemma-3b-pt-224" 
+model_id = "google/paligemma2-3b-pt-448" 
 processor = PaliGemmaProcessor.from_pretrained(model_id)
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -19,7 +19,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 image_token = processor.tokenizer.convert_tokens_to_ids("<image>")
 
 def collate_fn(examples):
-  texts = ["<image>answer " + example["question"] for example in examples]
+  texts = ["<image>answer en " + example["question"] for example in examples]
   labels= [example['multiple_choice_answer'] for example in examples]
   images = [example["image"].convert("RGB") for example in examples]
   tokens = processor(text=texts, images=images, suffix=labels,
