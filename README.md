@@ -4,7 +4,7 @@ Recipes for shrinking, optimizing, customizing cutting edge vision and multimoda
 
 Latest examples 👇🏻 
 - [Multimodal RAG using ColPali and Qwen2-VL](https://github.com/merveenoyan/smol-vision/blob/main/ColPali_%2B_Qwen2_VL.ipynb)
-- [QLoRA Fine-tune IDEFICS3 on VQAv2](https://github.com/merveenoyan/smol-vision/blob/main/Idefics_FT.ipynb) and [script](https://github.com/merveenoyan/smol-vision/blob/main/train_idefics2.py)
+- [Fine-tune ColPali for Multimodal RAG](https://github.com/merveenoyan/smol-vision/blob/main/Finetune_ColPali.ipynb)                                                                         
 
 **Note**: The script and notebook are updated to fix few issues related to QLoRA!
 
@@ -20,5 +20,6 @@ Latest examples 👇🏻
 | VLM Fine-tuning    | [QLoRA/Fine-tune IDEFICS3 or SmolVLM on VQAv2](https://github.com/merveenoyan/smol-vision/blob/main/Smol_VLM_FT.ipynb)                                                                          | QLoRA/Full Fine-tune IDEFICS3 or SmolVLM on VQAv2 dataset                                                                 |
 | VLM Fine-tuning (Script)   | [QLoRA Fine-tune IDEFICS3 on VQAv2](https://github.com/merveenoyan/smol-vision/blob/main/smolvlm.py)                                                                          | QLoRA/Full Fine-tune IDEFICS3 or SmolVLM on VQAv2 dataset                                                                 |
 | Multimodal RAG    | [Multimodal RAG using ColPali and Qwen2-VL](https://github.com/merveenoyan/smol-vision/blob/main/ColPali_%2B_Qwen2_VL.ipynb)                                                                          | Learn to retrieve documents and pipeline to RAG without hefty document processing using ColPali through Byaldi and do the generation with Qwen2-VL                                                              |
+| Multimodal Retriever Fine-tuning    | [Fine-tune ColPali for Multimodal RAG]([https://github.com/merveenoyan/smol-vision/blob/main/ColPali_%2B_Qwen2_VL.ipynb](https://github.com/merveenoyan/smol-vision/blob/main/Finetune_ColPali.ipynb))                                                                          | Learn to apply contrastive fine-tuning on ColPali to customize it for your own multimodal document RAG use case                                                              |
 | Speed-up/Memory Optimization | Vision language model serving using TGI (SOON)                                                                                                                          | Explore speed-ups and memory improvements for vision-language model serving with text-generation inference |
 | Quantization/Optimum/ORT     | All levels of quantization and graph optimizations for Image Segmentation using Optimum (SOON)                                                                          | End-to-end model optimization using Optimum                                                                |
