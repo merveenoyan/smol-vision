@@ -2,6 +2,7 @@
 # Smol Vision 🐣
 Recipes for shrinking, optimizing, customizing cutting edge vision and multimodal AI models. 
 
+**NOTE:** GitHub refuses to render notebooks for a long time now, so smol-vision now lives [here](https://huggingface.co/merve/smol-vision).
 Latest examples 👇🏻
 - [Fine-tuning SmolVLM2 on Video Captioning](https://github.com/merveenoyan/smol-vision/blob/main/Fine_tune_SmolVLM2_on_Video.ipynb)
 - [Multimodal RAG using ColPali and Qwen2-VL](https://github.com/merveenoyan/smol-vision/blob/main/ColPali_%2B_Qwen2_VL.ipynb)
