@@ -2,10 +2,11 @@
 # Smol Vision 🐣
 Recipes for shrinking, optimizing, customizing cutting edge vision and multimodal AI models. 
 
-**NOTE:** GitHub refuses to render notebooks for a long time now, so smol-vision now lives [here](https://huggingface.co/merve/smol-vision).
+**NOTE:** GitHub refuses to render notebooks for a long time now, so smol-vision now lives [here](https://huggingface.co/merve/smol-vision). I still update this repository but it's inconvenient to read here.
+
 Latest examples 👇🏻
-- [Fine-tuning SmolVLM2 on Video Captioning](https://github.com/merveenoyan/smol-vision/blob/main/Fine_tune_SmolVLM2_on_Video.ipynb)
-- [Multimodal RAG using ColPali and Qwen2-VL](https://github.com/merveenoyan/smol-vision/blob/main/ColPali_%2B_Qwen2_VL.ipynb)
+- [Fine-tune Gemma-3n for all modalities (audio-text-image)](https://github.com/merveenoyan/smol-vision/blob/main/Gemma3n_Fine_tuning_on_All_Modalities.ipynb)
+- [Any-to-Any (Video) RAG with OmniEmbed and Qwen](https://github.com/merveenoyan/smol-vision/blob/main/Any_to_Any_RAG.ipynb)
 - [Fine-tune ColPali for Multimodal RAG](https://github.com/merveenoyan/smol-vision/blob/main/Finetune_ColPali.ipynb)                                                                         
 
 **Note**: The script and notebook are updated to fix few issues related to QLoRA!
@@ -23,5 +24,8 @@ Latest examples 👇🏻
 | VLM Fine-tuning (Script)   | [QLoRA Fine-tune IDEFICS3 on VQAv2](https://github.com/merveenoyan/smol-vision/blob/main/smolvlm.py)                                                                          | QLoRA/Full Fine-tune IDEFICS3 or SmolVLM on VQAv2 dataset                                                                 |
 | Multimodal RAG    | [Multimodal RAG using ColPali and Qwen2-VL](https://github.com/merveenoyan/smol-vision/blob/main/ColPali_%2B_Qwen2_VL.ipynb)                                                                          | Learn to retrieve documents and pipeline to RAG without hefty document processing using ColPali through Byaldi and do the generation with Qwen2-VL                                                              |
 | Multimodal Retriever Fine-tuning    | [Fine-tune ColPali for Multimodal RAG](https://github.com/merveenoyan/smol-vision/blob/main/Finetune_ColPali.ipynb)                                                                          | Learn to apply contrastive fine-tuning on ColPali to customize it for your own multimodal document RAG use case                                                              |
+| Any-to-Any Fine-tuning             | [Fine-tune Gemma-3n for all modalities (audio-text-image)](https://github.com/merveenoyan/smol-vision/blob/main/Gemma3n_Fine_tuning_on_All_Modalities.ipynb)            | Fine-tune Gemma-3n model to handle any modality: audio, text, and image.                                           |
+| Any-to-Any RAG              | [Any-to-Any (Video) RAG with OmniEmbed and Qwen](https://github.com/merveenoyan/smol-vision/blob/main/Any_to_Any_RAG.ipynb)                                             | Do retrieval and generation across modalities (including video) using OmniEmbed and Qwen.                          |
+
 | Speed-up/Memory Optimization | Vision language model serving using TGI (SOON)                                                                                                                          | Explore speed-ups and memory improvements for vision-language model serving with text-generation inference |
 | Quantization/Optimum/ORT     | All levels of quantization and graph optimizations for Image Segmentation using Optimum (SOON)                                                                          | End-to-end model optimization using Optimum                                                                |
