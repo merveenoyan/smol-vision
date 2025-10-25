@@ -1,13 +1,15 @@
 ![Smol](https://github.com/merveenoyan/smol-vision/assets/53175384/930d5b36-bb9d-4ab6-8b5a-4fec28c48f80)
-# Smol Vision 🐣
-Recipes for shrinking, optimizing, customizing cutting edge vision and multimodal AI models. 
 
-**NOTE:** GitHub refuses to render notebooks for a long time now, so smol-vision now lives [here](https://huggingface.co/merve/smol-vision). I still update this repository but it's inconvenient to read here.
+# Smol Vision 🐣
+
+Recipes for shrinking, optimizing, customizing cutting edge vision and multimodal AI models.
+
+**NOTE:** GitHub refuses to render notebooks for a long time now, so the notebooks of smol-vision with rich outputs now lives [here](https://huggingface.co/merve/smol-vision). I still update this repository but it's inconvenient to read here.
 
 Latest examples 👇🏻
-- [Fine-tune Gemma-3n for all modalities (audio-text-image)](https://github.com/merveenoyan/smol-vision/blob/main/Gemma3n_Fine_tuning_on_All_Modalities.ipynb)
-- [Any-to-Any (Video) RAG with OmniEmbed and Qwen](https://github.com/merveenoyan/smol-vision/blob/main/Any_to_Any_RAG.ipynb)
-- [Fine-tune ColPali for Multimodal RAG](https://github.com/merveenoyan/smol-vision/blob/main/Finetune_ColPali.ipynb)                                                                         
+- [Grounded Fine-tuning](https://github.com/merveenoyan/smol-vision/blob/main/Grounded_Fine_tuning%20GH.ipynb)
+- [Fine-tune Florence-2](https://github.com/merveenoyan/smol-vision/blob/main/Fine_tune_Florence_2.ipynb)
+- [Fine-tune DINOv3](https://github.com/merveenoyan/smol-vision/blob/main/DINOv3_FT.ipynb)
 
 **Note**: The script and notebook are updated to fix few issues related to QLoRA!
 
@@ -19,9 +21,11 @@ Latest examples 👇🏻
 | Model Shrinking              | [Knowledge Distillation for Computer Vision](https://huggingface.co/docs/transformers/en/tasks/knowledge_distillation_for_image_classification)                         | Knowledge distillation for image classification.                                                           |
 | Quantization                 | [Fit in vision models using Quanto](https://github.com/merveenoyan/smol-vision/blob/main/Fit_in_vision_models_using_quanto.ipynb)                                       | Fit in vision models to smaller hardware using quanto                                                      |
 | Speed-up                     | [Faster foundation models with torch.compile](https://github.com/merveenoyan/smol-vision/blob/main/Faster_foundation_models_with_torch_compile.ipynb)                   | Improving latency for foundation models using `torch.compile`                                              |
-| VLM Fine-tuning     | [Fine-tune Florence-2](https://github.com/merveenoyan/smol-vision/blob/main/Fine_tune_Florence_2.ipynb)                                                                          | Fine-tune Florence-2 on DocVQA dataset                                                                |
+| [NEW] VLM Fine-tuning     | [Fine-tune Florence-2](https://github.com/merveenoyan/smol-vision/blob/main/Fine_tune_Florence_2.ipynb)                                                                          | Fine-tune Florence-2 on DocVQA dataset                                                                |
 | VLM Fine-tuning    | [QLoRA/Fine-tune IDEFICS3 or SmolVLM on VQAv2](https://github.com/merveenoyan/smol-vision/blob/main/Smol_VLM_FT.ipynb)                                                                          | QLoRA/Full Fine-tune IDEFICS3 or SmolVLM on VQAv2 dataset                                                                 |
 | VLM Fine-tuning (Script)   | [QLoRA Fine-tune IDEFICS3 on VQAv2](https://github.com/merveenoyan/smol-vision/blob/main/smolvlm.py)                                                                          | QLoRA/Full Fine-tune IDEFICS3 or SmolVLM on VQAv2 dataset                                                                 |
+| [NEW] VLM Fine-tuning     | [Grounded Fine-tuning](https://github.com/merveenoyan/smol-vision/blob/main/Grounded_Fine_tuning%20GH.ipynb)                                                                          | Grounded fine-tuning for vision-language models                                                                |
+| [NEW] Vision Model Fine-tuning     | [Fine-tune DINOv3](https://github.com/merveenoyan/smol-vision/blob/main/DINOv3_FT.ipynb)                                                                          | Fine-tune DINOv3 for vision tasks                                                                |
 | Multimodal RAG    | [Multimodal RAG using ColPali and Qwen2-VL](https://github.com/merveenoyan/smol-vision/blob/main/ColPali_%2B_Qwen2_VL.ipynb)                                                                          | Learn to retrieve documents and pipeline to RAG without hefty document processing using ColPali through Byaldi and do the generation with Qwen2-VL                                                              |
 | Multimodal Retriever Fine-tuning    | [Fine-tune ColPali for Multimodal RAG](https://github.com/merveenoyan/smol-vision/blob/main/Finetune_ColPali.ipynb)                                                                          | Learn to apply contrastive fine-tuning on ColPali to customize it for your own multimodal document RAG use case                                                              |
 | Any-to-Any Fine-tuning             | [Fine-tune Gemma-3n for all modalities (audio-text-image)](https://github.com/merveenoyan/smol-vision/blob/main/Gemma3n_Fine_tuning_on_All_Modalities.ipynb)            | Fine-tune Gemma-3n model to handle any modality: audio, text, and image.                                           |
