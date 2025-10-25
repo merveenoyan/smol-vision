@@ -7,9 +7,9 @@ Recipes for shrinking, optimizing, customizing cutting edge vision and multimoda
 **NOTE:** GitHub refuses to render notebooks for a long time now, so the notebooks of smol-vision with rich outputs now lives [here](https://huggingface.co/merve/smol-vision). I still update this repository but it's inconvenient to read here.
 
 Latest examples 👇🏻
-- [Grounded Fine-tuning](https://github.com/merveenoyan/smol-vision/blob/main/Grounded_Fine_tuning%20GH.ipynb)
-- [Fine-tune Florence-2](https://github.com/merveenoyan/smol-vision/blob/main/Fine_tune_Florence_2.ipynb)
-- [Fine-tune DINOv3](https://github.com/merveenoyan/smol-vision/blob/main/DINOv3_FT.ipynb)
+- [Fine-tune Kosmos2.5 on OCR with bounding boxes](https://github.com/merveenoyan/smol-vision/blob/main/Grounded_Fine_tuning%20GH.ipynb)
+- [Fine-tune Florence-2 on document question answering](https://github.com/merveenoyan/smol-vision/blob/main/Fine_tune_Florence_2.ipynb)
+- [Fine-tune DINOv3 on image classification](https://github.com/merveenoyan/smol-vision/blob/main/DINOv3_FT.ipynb)
 
 **Note**: The script and notebook are updated to fix few issues related to QLoRA!
 
